@@ -1,0 +1,123 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <style>
+    .resizableBox {
+      max-width: 500px;
+      max-height: 500px;
+      overflow: auto;
+    }
+
+    .resizable-table td,
+    .resizable-table th {
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+
+    .ui-resizable-helper {
+      border: 1px dashed #000;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="resizableBox">
+    <table class="resizable-table">
+      <tr>
+        <td>
+          <table class="resizable-table">
+            <tr>
+              <th>Header 1</th>
+              <th>Header 2</th>
+              <th>Header 3</th>
+              <th>Header 1</th>
+              <th>Header 2</th>
+              <th>Header 3</th>
+              <th>Header 1</th>
+              <th>Header 2</th>
+              <th>Header 3</th>
+            </tr>
+            <tr>
+              <td>Cell 1</td>
+              <td>Cell 2</td>
+              <td>Cell 3</td>
+              <td>Cell 1</td>
+              <td>Cell 2</td>
+              <td>Cell 3</td>
+              <td>Cell 1</td>
+              <td>Cell 2</td>
+              <td>Cell 3</td>
+            </tr>
+            <tr>
+              <td>Cell 4</td>
+              <td>Cell 5</td>
+              <td>Cell 6</td>
+              <td>Cell 1</td>
+              <td>Cell 2</td>
+              <td>Cell 3</td>
+              <td>Cell 1</td>
+              <td>Cell 2</td>
+              <td>Cell 3</td>
+            </tr>
+            <tr>
+              <td>Cell 7</td>
+              <td>Cell 8</td>
+              <td>Cell 9</td>
+              <td>Cell 1</td>
+              <td>Cell 2</td>
+              <td>Cell 3</td>
+              <td>Cell 1</td>
+              <td>Cell 2</td>
+              <td>Cell 3</td>
+            </tr>
+          </table>
+        </td>
+
+      </tr>
+    </table>
+  </div>
+
+  <table class="resizable-table">
+    <tr>
+      <th>Header 1</th>
+      <th>Header 2</th>
+      <th>Header 3</th>
+    </tr>
+    <tr>
+      <td>Cell 1</td>
+      <td>Cell 2</td>
+      <td>Cell 3</td>
+    </tr>
+    <tr>
+      <td>Cell 4</td>
+      <td>Cell 5</td>
+      <td>Cell 6</td>
+    </tr>
+    <tr>
+      <td>Cell 7</td>
+      <td>Cell 8</td>
+      <td>Cell 9</td>
+    </tr>
+  </table>
+  <script src="script.js"></script>
+  <script>
+    // $(document).ready(function () {
+    //   // Make table rows resizable
+    //   $('table tr').resizable({
+    //     handles: 's', // Only allow resizing vertically
+    //     minHeight: 10, // Set a minimum height
+    //     maxHeight: 500, // Set a maximum height
+    //   });
+    //   $('table td, table th').resizable({
+    //     handles: 'e', // Only allow resizing vertically
+    //     minWidth: 10, // Set a minimum height
+    //     maxWidth: 500 // Set a maximum height
+    //   });
+    // });
+  </script>
+</body>
+
+</html>

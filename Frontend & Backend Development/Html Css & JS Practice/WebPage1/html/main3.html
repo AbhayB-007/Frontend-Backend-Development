@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS SELECTORS</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        /* Element Selector */
+        p {
+            color: red;
+            background-color: rgb(235, 167, 21);
+        }
+
+
+        /* ID selector  */
+        #p2 {
+            color: red;
+            border: 2px solid chocolate;
+        }
+
+        /* class selector */
+        .bgcolor {
+            background: rgb(53, 14, 211);
+        }
+
+        .redelement {
+            color: red;
+        }
+
+        .class1 {
+            background-color: rgb(231, 231, 33);
+        }
+
+        .class2 {
+            border: 1px solid green;
+        }
+
+        /* id selector */
+        #p3 {
+            color: blue;
+        }
+
+        /* group selector */
+        footer,
+        span,
+        div {
+            background-color: rgb(221, 227, 230);
+
+        }
+
+        .h2 {
+            background-color: greenyellow;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h2 class="h2">CSS SELECTORS</h2>
+
+    <p id="p2" class="redelement bgcolor">this is a simple paragraph to demonstrate css</p>
+    <p id="p2" class="redelement bgcolor">this is a simple paragraph to demonstrate css</p>
+    <div>
+        <p>this is a paragraph in &lt;div&gt; tag</p>
+    </div>
+    <p id="p3" class="class1 class2">this is a simple paragraph to demonstrate css</p>
+    <p class="class1 class2">this is a simple paragraph to demonstrate css</p>
+    <p id="p3" class="class1 class2">this is a simple paragraph to demonstrate css</p>
+    <span>this is span</span>
+    <p>this is paragraph</p>
+    <footer>this is footer</footer>
+
+</body>
+
+</html>

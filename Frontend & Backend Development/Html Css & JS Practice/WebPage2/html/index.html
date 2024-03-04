@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style1.css">
+    <style>
+        .container {
+            border: 1px solid red;
+            width: 50px;
+            height: 50px;
+            position: relative;
+
+        }
+
+        #id1 {
+            background-color: aqua;
+            top: 10px;
+            z-index: 1;
+        }
+
+        #id2 {
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div style="border: 2px solid black;padding: 20px;">
+        <h3 style="text-align: center;margin: auto; width: 100%;">Understanding z-index</h3>
+        <div id="div">
+            <div class="container" id="id1"></div>
+            <div class="container" id="id2"></div>
+        </div>
+    </div>
+
+</body>
+<script src="../js/script.js"></script>
+
+</html>

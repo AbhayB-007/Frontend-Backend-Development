@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forms and input tags</title>
+    <style>
+
+        #heading {
+            
+            text-align: center;
+            padding-top: 10px;
+        }
+        
+        #container {
+            width: 500px;
+            border-radius: 50px;
+            border: 4px solid rgb(235, 245, 255);
+            background-color: #e1caff2e;
+            margin: auto;
+            text-align: center;
+            padding: 30px;
+        }
+        
+        input,
+        textarea {
+            border: 2px solid rgb(243, 207, 179);
+            background-color: rgb(255, 209, 172);
+            outline: transparent;
+            
+        }
+        #bt{
+            border-radius: 50px;
+            width: 50px;
+            height: 50px;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="heading">LOGIN PAGE</h1>
+    <div id="container">
+        <form action="loop.php" method="post">
+            <div>
+                <label for="un">username</label>
+            </div>
+            <div>
+                <input type="text" name="un" id="un">
+            </div>
+            <br>
+            <div>
+                <label for="pass">password</label>
+            </div>
+            <div>
+                <input type="password" name="pass" id="pass">
+            </div>
+            <br>
+            <div>
+                <label for="myemail">email</label>
+            </div>
+            <div>
+                <input type="email" id="myemail">
+            </div>
+            <br>
+            <div>
+                <label for="mydate">date of birth</label>
+            </div>
+            <div>
+                <input type="date" name="mydate">
+            </div>
+            <br>
+            <div>
+                bonus:<br> <input type="number" name="mydate">
+            </div>
+            <br>
+            <div>
+                your eligiblity: <br>above 18 yrs<input type="radio" name="my eligiblity"> below 18 yrs <input
+                    type="radio" name="my eligiblity">
+            </div>
+
+            <div>
+                <h3>Enter your name for surprise!</h3>
+                <input type="text" class="inp" id="myname">
+            </div>
+            <br>
+            <div>
+                <button name="test_button1" id="bt" onclick="alert(getElementById('myname').value + ' you are tricked!')">
+                    =>
+                </button>
+            </div>
+            <br>
+            <div>
+                gender :- male <input type="radio" name="mygender">
+                female <input type="radio" name="mygender">
+                other <input type="radio" name="mygender">
+            </div>
+            <br>
+            <div>
+                <label for="mytextarea">
+                    write about yourself
+                </label>
+            </div>
+            <br>
+            <div>
+                <textarea style="resize: none;" name="mytext" cols="30" rows="5" id="mytextarea"></textarea>
+            </div>
+
+            <div>
+                <h3>
+                    car
+                </h3>
+                <select>
+                    <option value="bmw">bmw</option>
+                    <option value="audi">audi</option>
+                    <option value="mercedes">mercedes</option>
+                    <option value="jaguar">jaguar</option>
+                </select>
+            </div>
+            <br>
+            <div>
+                <input type="submit" value="submit now">
+                <input type="reset" value="reset now ">
+            </div>
+            <br>
+
+        </form>
+    </div>
+</body>
+
+</html>

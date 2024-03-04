@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript | strings and string methods </title>
+</head>
+
+<body>
+    <div class="container">
+        <div id="content"></div>
+        <!-- <input type="text" id="test1"><br> <br>
+        <button onclick="alert(getElementById('test1').value + ' you are tricked...!!!')">Click here</button> -->
+
+    </div>
+    <script>
+        // var string = 'Vestige';
+        // var name = 'Abhay';
+        // var message = 'abhay is a good boy';
+        // console.log(string + name + ',' + message);
+
+        // var temp = `${name} is a nice person and has a youtube channel named '${string}'`;
+        // console.log(temp);
+
+        // var len = name.length;
+        // console.log(`Length of name variable is ${len}`);
+
+        // escape sequence character
+        // console.log('hello \\n world')
+
+        // Constructor
+        var y = new String(132);
+        // console.log(y);
+
+        // injecting into the HTML
+        document.getElementById('content').innerHTML = '<h1> This is an h1 heading (code injected) </h1>'
+
+        var str = 'this is a string';
+        console.log(str);
+
+        // first occurence of a substring
+        // var position = str.indexOf('s');
+        // console.log(position);
+
+        // // last occurence of a substring
+        // position = str.lastIndexOf('s');
+        // console.log(position);
+
+        // // Substring from a string
+        // var substr = str.slice(-16);
+        // console.log(substr);
+
+        // substr = str.substring(1,10); only take +ve values
+        // console.log(substr)
+
+        // var substr = str.substr(-16,16);
+        // console.log(substr);
+
+        // var replaced = str.replace('a string','abhay');
+        // console.log(replaced);
+
+        // uppercase
+        // console.log(str.toUpperCase());
+        // lowercase
+        // console.log(str.toLowerCase());
+
+        //concatinate function
+        // var newString = str.concat(' new strings')
+        // console.log(newString)
+        // console.log(str.concat(' and new strings'));
+
+        // var strWithWhitespaces = '      this contains whitespaces   ';
+        // console.log(strWithWhitespaces);
+        // console.log(strWithWhitespaces.trim());
+
+        //Not very important
+        // var char3 = str.charAt(2);
+        // //console.log(char3);
+        // console.log(str.charAt(2));
+        // console.log(str.charAt(6));
+        // console.log(str.charCodeAt(6));
+
+        //slicing
+        // console.log(str[0]);
+
+
+    </script>
+</body>
+
+</html>

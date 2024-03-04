@@ -1,0 +1,209 @@
+<html>
+
+
+<head>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- Include DataTables library -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <style>
+        .table-container {
+            overflow-x: auto;
+            max-width: 100%;
+        }
+
+        #resizable-table th,
+        #resizable-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #resizable-table th {
+            background-color: #f2f2f2;
+        }
+
+        .resize-handle {
+            position: relative;
+            background-color: transparent;
+            width: 6px;
+            cursor: col-resize;
+            z-index: 10;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="table-container">
+        <table id="resizable-table">
+            <thead>
+                <tr>
+                    <th>Column 1</th>
+                    <th>Column 2</th>
+                    <th>Column 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Row 1, Cell 1</td>
+                    <td>Row 1, Cell 2</td>
+                    <td>Row 1, Cell 3</td>
+                </tr>
+                <tr>
+                    <td>Row 2, Cell 1</td>
+                    <td>Row 2, Cell 2</td>
+                    <td>Row 2, Cell 3</td>
+                </tr>
+                </tr>
+                <tr>
+                    <td>Row 3, Cell 1</td>
+                    <td>Row 3, Cell 2</td>
+                    <td>Row 3, Cell 3</td>
+                </tr>
+                </tr>
+                <tr>
+                    <td>Row 4, Cell 1</td>
+                    <td>Row 4, Cell 2</td>
+                    <td>Row 4, Cell 3</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <textarea id="textarea"></textarea>
+        <div id="suggestions"></div>
+
+    </div>
+</body>
+
+<script>
+
+    $('#resizable-table').DataTable({
+        // dom: 'Rlfrtip',
+        ordering: false,
+        // select: true,
+        // colReorder: true,
+        // Initialize DataTables with your desired options        
+        initComplete: function () {
+            // Make columns resizable
+            // $(this.api().table().header()).find('th').resizable({
+            //     handles: 'e, w',
+            //     stop: function () {
+            //         $(this.api().table().header()).css('height', '');
+            //         $(this.api().table().body()).css('height', '');
+            //         $(this.api().table().footer()).css('height', '');
+            //         $(this.api().table().columns.adjust());
+            //     }
+            // });
+
+            // Event handler for column header click
+            $('th').on('click', function () {
+                // var columnIndex = $('#resizable-table').DataTable().column($(this)).index();
+                var columnIndex = $(this).index();
+                var columnData = $('#resizable-table').DataTable().column(columnIndex).data().toArray();
+                console.log('Column Data:', columnData);
+                // Perform your desired action with the column data
+            });
+
+            // Event handler for row header click
+            $('tr td').on('click', function () {                
+                var rowData = $('#resizable-table').DataTable().row($(this)).data();
+                console.log('Row Data:', rowData);                
+            });
+
+        }
+    });
+
+    // // Event handler for column header click
+    // $('th').on('click', function () {
+    //     var columnIndex = $('#resizable-table').DataTable().column($(this)).index();
+    //     var columnIndex = $(this).index();
+    //     var columnData = $('#resizable-table').DataTable().column(columnIndex).data().toArray();
+    //     console.log('Column Data:', columnData);
+    //     // Perform your desired action with the column data
+    // });
+
+    // // Event handler for row header click
+    // $('tr td').on('click', function () {
+    //     // var rowIndex = $('#resizable-table').DataTable().row($(this)).index();
+    //     // var rowData = $('#resizable-table').DataTable().eq($(this)).data().toArray();
+    //     var rowData = $('#resizable-table').DataTable().row($(this)).data();
+    //     console.log('Row Data:', rowData);
+    //     // Perform your desired action with the row data
+    // });
+
+
+    // $(document).ready(function () {
+    //     // Make table rows resizable
+    //     $('table tr').resizable({
+    //         handles: 's', // Only allow resizing vertically
+    //         minHeight: 10, // Set a minimum height
+    //         maxHeight: 500, // Set a maximum height
+    //     });
+    //     $('table td, table th').resizable({
+    //         handles: 'e', // Only allow resizing vertically
+    //         minWidth: 10, // Set a minimum height
+    //         maxWidth: 500 // Set a maximum height
+    //     });
+    // });
+
+    // window.addEventListener('DOMContentLoaded', () => {
+    //     const table = document.getElementById('resizable-table');
+    //     const headers = table.querySelectorAll('th');
+
+    //     headers.forEach((header, columnIndex) => {
+    //         const resizeHandle = document.createElement('div');
+    //         resizeHandle.classList.add('resize-handle');
+    //         header.appendChild(resizeHandle);
+
+    //         let startX = 0;
+    //         let startWidth = 0;
+
+    //         resizeHandle.addEventListener('mousedown', startResize);
+
+    //         function startResize(event) {
+    //             startX = event.pageX;
+    //             startWidth = header.offsetWidth;
+    //             window.addEventListener('mousemove', resize);
+    //             window.addEventListener('mouseup', stopResize);
+    //         }
+
+    //         function resize(event) {
+    //             const width = startWidth + (event.pageX - startX);
+    //             header.style.width = `${width}px`;
+
+    //             const cells = table.querySelectorAll(`tr > td:nth-child(${columnIndex + 1})`);
+    //             cells.forEach((cell) => {
+    //                 cell.style.width = `${width}px`;
+    //             });
+    //         }
+
+    //         function stopResize() {
+    //             window.removeEventListener('mousemove', resize);
+    //             window.removeEventListener('mouseup', stopResize);
+    //         }
+    //     });
+    // });
+
+    // //text suggestions
+    // const keywords = ['apple', 'banana', 'cherry', 'grape', 'orange'];
+    // const textarea = document.getElementById('textarea');
+    // const suggestionsDiv = document.getElementById('suggestions');
+    // textarea.addEventListener('input', showSuggestions);
+
+    // function showSuggestions() {
+    //     const inputText = textarea.value;
+    //     const matchedKeywords = keywords.filter(keyword => keyword.startsWith(inputText));
+
+    //     if (inputText.length === 0 || matchedKeywords.length === 0) {
+    //         suggestionsDiv.innerHTML = '';
+    //         return;
+    //     }
+
+    //     const suggestionsHTML = matchedKeywords.map(keyword => `<div>${keyword}</div>`).join('');
+    //     suggestionsDiv.innerHTML = suggestionsHTML;
+    // }
+
+</script>
+
+</html>

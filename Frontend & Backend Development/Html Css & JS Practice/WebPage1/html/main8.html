@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position in css </title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            border: 2px solid black;
+            width: 500px;
+            height: 1000px;
+            margin: auto;
+            text-align: center;
+            /* overflow: auto; */
+
+        }
+
+        .box {
+            /* display: inline-block; */
+            width: 100px;
+            height: 100px;
+            border: 2px solid red;
+
+        }
+        
+        #box1{
+            position: relative;
+            background-color: rgb(243, 118, 96);
+            top: 50px;
+            z-index: -100 ;
+        }
+        #box2{
+            background-color: rgb(82, 82, 255);
+            position: relative;
+            z-index:  -1000;
+        }
+        /* #box1{
+            background-color: black;
+            position: absolute;
+            z-index: 1000;
+            left: 160px; 
+        }
+
+        #box2 {
+            visibility,display and Z-index 
+
+            visibility is only for visible purpose so it hides the element if we sets its value to hidden but leaves an empty space
+            visibility: hidden; 
+
+            display none makes the element invisible and also the space  
+            display: none; 
+
+            z-index is a property which makes the element overlaps to another by setting its value greater than the element which it overlaps  
+            background-color: aqua;
+            position: absolute;
+            z-index: 100;
+            left: 130px;/
+        }
+
+         #box3 { 
+        
+            positions in css 
+
+            relative: Positions the element relative to its current/normal position 
+            position: relative;
+
+            position: Positions the element relative to its parent position  
+            position: absolute;
+
+            fixed: Positions the element relative to the browser window 
+            position: fixed;
+
+            sticky: Positions the element permanently to normal position position: sticky;
+        }
+
+        */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="box" id="box1">1</div>
+        <div class="box" id="box2">2</div>
+        <div class="box" id="box3">3</div>
+        <div class="box" id="box4">4</div>
+
+    </div>
+</body>
+
+</html>

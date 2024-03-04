@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+
+        }
+
+        #head {
+            padding-left: 50px;
+            background-image: url('C:\Users\PC\Desktop\web tech\limestone-rock-phang-nga-1-Beautiful-limestone-rock-in-the-ocean.jpg');
+            background-position: 150px 150px;
+            color: rgba(177, 0, 122, 0.36);
+            font-family: cursive;
+            font-size: 30px;
+            text-shadow: 10px 10px 10px #f3b0ffbf;
+
+        }
+
+        .container {
+            margin: 20px;
+            border: 1px solid rgb(255, 255, 255);
+            border-radius: 50px;
+            padding: 40px 40px;
+            background-color: rgba(197, 182, 255, 0.44);
+            height: 400px;
+
+        }
+
+        .heading {
+            border: 1px solid rgb(248, 248, 248);
+            border-radius: 20px;
+            /* padding: 0px 50px; */
+            background-color: rgba(198, 255, 197, 0.32);
+            color: rgba(70, 70, 70, 0.89);
+            font-family: cursive;
+            text-shadow: 3px 3px 2px rgba(255, 169, 169, 0.82);
+            text-align: center;
+            margin: 10px auto;
+
+
+        }
+
+        .para {
+            margin: 0px auto;
+            border-radius: 40px;
+            border: 1px solid rgb(253, 253, 253);
+            padding: 20px 40px;
+            background-color: rgba(255, 187, 187, 0.51);
+            color: hsl(0, 0%, 100%);
+            font-size: 20px;
+            text-align: center;
+            text-shadow: 5px 6px 4px #000000;
+            font-family: 'Parisienne', cursive;
+            font-family: 'Tillana', cursive;
+
+
+        }
+
+        body {
+            background-image: url('../media\ files/photo-1477959858617-67f85cf4f1df.jpg7po');
+            background-size: 1800px;
+        }
+
+        .btn {
+            background-color: #fde8bc;
+            color: rgb(62, 86, 239);
+            border: none;
+            border-radius: 10px;
+            font-family: cursive;
+            text-shadow: none;
+            cursor: pointer;
+        }
+
+        h4 {
+            font-size: large;
+            text-decoration: underline;
+            color: rgb(255, 255, 255);
+            font-family: 'Parisienne', cursive;
+            font-family: 'Tillana', cursive;
+            padding: 0px 50px;
+            text-align: center;
+        }
+
+        #test_btn_1 {
+            margin: -10px 380px;
+            width: 80px;
+        }
+
+        #test_btn_2 {
+            margin: -20px 400px;
+            width: 80px;
+            float: right;
+            background-color: rgb(255, 147, 250);
+        }
+
+        .btn:visited {
+            color: brown;
+            background-color: rgb(179, 248, 204);
+        }
+
+        .btn:hover {
+            color: rgb(0, 0, 0);
+            background-color: rgb(255, 188, 137);
+        }
+
+        #test_btn_2:hover {
+            color: rgb(0, 0, 0);
+            background-color: rgb(255, 188, 137);
+        }
+
+        .btn:active {
+            background-color: brown;
+        }
+
+        #test_btn_2:active {
+            background-color: brown;
+        }
+    </style>
+
+
+    <!-- para -->
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Tillana&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header id="head">
+        <h1>TRAVEL VLOGS</h1>
+    </header>
+    <div id="container1" class="container">
+        <h2 class="heading ">VLOG-1</h2>
+        <p id="firstpara" class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ex molestiae in
+            quos
+            perspiciatis
+            recusandae, consequuntur maxime perferendis magni. Repudiandae hic vitae voluptatum nulla, quis libero
+            facere dignissimos itaque reprehenderit laboriosam assumenda repellendus sit fugit possimus tenetur ratione.
+
+            <a class="btn" href="https://google.com">read more</a><br>
+        <h4>click twice to trigger double click event </h4>
+        <button id="test_btn_1" class="btn" type="submit" ondblclick="alert('you hit the button twice')">click
+            here</button>
+        <button id="test_btn_2" class="btn" type="submit" ondblclick="alert('you hit the button twice')">click
+            here</button>
+        </p>
+
+
+    </div>
+    <div class="container">
+        <h2 class="heading"> VLOG -2</h2>
+        <p id="second" class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ex molestiae in
+            quos
+            perspiciatis recusandae, consequuntur maxime perferendis magni. Repudiandae hic vitae voluptatum nulla, quis
+            libero facere dignissimos itaque reprehenderit laboriosam assumenda repellendus sit fugit possimus tenetur
+        </p>
+    </div>
+    <div class="container">
+        <h2 class="heading">VLOG -3</h2>
+        <p id="third" class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ex molestiae in quos
+            perspiciatis
+            recusandae, consequuntur maxime perferendis magni. Repudiandae hic vitae voluptatum nulla, quis libero
+            facere dignissimos itaque reprehenderit laboriosam assumenda repellendus sit fugit possimus tenetur ratione.
+        </p>
+    </div>
+    <div class="container">
+        <h2 class="heading">VLOG -4</h2>
+        <p id="fourth" class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ex molestiae in
+            quos perspiciatis
+            recusandae, consequuntur maxime perferendis magni. Repudiandae hic vitae voluptatum nulla, quis libero
+            facere dignissimos itaque reprehenderit laboriosam assumenda repellendus sit fugit possimus tenetur ratione.
+        </p>
+    </div>
+    <div class="container">
+        <h2 class="heading">VLOG -5</h2>
+        <p id="fifth" class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ex molestiae in quos
+            perspiciatis
+            recusandae, consequuntur maxime perferendis magni. Repudiandae hic vitae voluptatum nulla, quis libero
+            facere dignissimos itaque reprehenderit laboriosam assumenda repellendus sit fugit possimus tenetur ratione.
+        </p>
+    </div>
+</body>
+
+</html>
