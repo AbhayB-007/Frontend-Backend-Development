@@ -11,7 +11,7 @@ import { Todo } from '../../Todo';
 export class TodosComponent {
 
   todos: Todo[];
-  constructor() {
+  constructor() {    
     this.todos = [
       {
         sno: 1,
