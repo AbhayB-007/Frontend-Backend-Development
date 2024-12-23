@@ -11,7 +11,7 @@ import { Todo } from '../../Todo';
 export class TodosComponent {
 
   todos: Todo[];
-  constructor() {    
+  constructor() {
     this.todos = [
       {
         sno: 1,
@@ -39,5 +39,12 @@ export class TodosComponent {
     const index = this.todos.indexOf(todo);
     this.todos.splice(index, 1);
   }
+
+  addTodo(todo: Todo) {
+    console.log(todo);
+    this.todos.push(todo);
+  }
+
+
 
 }
