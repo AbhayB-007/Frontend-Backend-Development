@@ -15,6 +15,9 @@
                 Please enter your Todo's Description.
             </div>
         </div>
-        <button type="submit" class="btn btn-sm btn-primary">Add Todo</button>
+        <div class="d-flex gap-2">
+            <button type="submit" class="btn btn-sm btn-primary">Add Todo</button>
+            <button type="button" class="btn btn-sm btn-danger" [disabled]="this.listCount===0" (click)="deleteAll()">Delete all</button>
+        </div>
     </form>
 </div>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Todo } from '../../Todo';
+import { SharedService } from '../../MyServices/shared.service';
 
 @Component({
   selector: 'app-todos',
@@ -9,42 +10,32 @@ import { Todo } from '../../Todo';
   styleUrl: './todos.component.css'
 })
 export class TodosComponent {
-
+  localItem: any;
   todos: Todo[];
-  constructor() {
-    this.todos = [
-      {
-        sno: 1,
-        title: "This is title1",
-        desc: "Description",
-        active: true
-      },
-      {
-        sno: 2,
-        title: "This is title2",
-        desc: "Description",
-        active: true
-      },
-      {
-        sno: 3,
-        title: "This is title3",
-        desc: "Description",
-        active: true
-      }
-    ]
+
+  constructor(private sharedService: SharedService) {
+    this.localItem = localStorage.getItem("todos");
+    if (this.localItem == null) {
+      this.todos = [];
+    }
+    else {
+      this.todos = JSON.parse(this.localItem);      
+    }
   }
 
-  deleteTodo(todo: Todo) {
-    console.log(todo);
+  deleteTodo(todo: Todo) {    
     const index = this.todos.indexOf(todo);
     this.todos.splice(index, 1);
+    localStorage.setItem("todos", JSON.stringify(this.todos));
   }
 
-  addTodo(todo: Todo) {
-    console.log(todo);
+  addTodo(todo: Todo) {    
     this.todos.push(todo);
+    localStorage.setItem("todos", JSON.stringify(this.todos));
   }
 
-
-
+  deleteAllTodos() {
+    this.todos = [];    
+    localStorage.setItem("todos", JSON.stringify(this.todos));
+  }
 }

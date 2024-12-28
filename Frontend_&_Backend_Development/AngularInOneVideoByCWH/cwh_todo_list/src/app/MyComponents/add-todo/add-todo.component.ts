@@ -1,5 +1,7 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { Todo } from '../../Todo';
+import { SharedService } from '../../MyServices/shared.service';
+
 @Component({
   selector: 'app-add-todo',
   standalone: false,
@@ -11,12 +13,19 @@ import { Todo } from '../../Todo';
 export class AddTodoComponent {
   title: string;
   desc: string;
+  listCount: number;
   @Output() todoAdd: EventEmitter<Todo> = new EventEmitter();
+  @Output() toDeleteAll: EventEmitter<Todo> = new EventEmitter();
+
+  constructor(private sharedService: SharedService) {
+    this.updateTodoList();
+  }
 
   validateForm(event: Event) {
     const form = event.target as HTMLFormElement;
     if (form.checkValidity()) {
       this.onSubmit();
+      this.updateTodoList();
     }
     event.preventDefault();
     event.stopPropagation();
@@ -25,11 +34,29 @@ export class AddTodoComponent {
 
   onSubmit() {
     const todo = {
-      sno: 8,
+      sno: ++this.listCount,
       title: this.title,
       desc: this.desc,
       active: true
     }
     this.todoAdd.emit(todo);
+    console.log(todo);
   }
+
+  deleteAll() {
+    this.toDeleteAll.emit();
+    this.updateTodoList();    
+  }
+
+  updateTodoList() {
+    const localItem = localStorage.getItem("todos");
+    if (localItem != null) {      
+      this.sharedService.updateList(JSON.parse(localItem));
+    }
+    this.sharedService.list$.subscribe((list) => {
+      this.listCount = list.length; // Get the count      
+    });
+  }
+
+
 }
