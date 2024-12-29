@@ -1,0 +1,60 @@
+ /* Hero Section */
+ .hero {
+     background: linear-gradient(135deg, #6c63ff, #00bcd4);
+     color: #fff;
+     padding: 100px 0;
+ }
+
+ .hero h1 {
+     font-weight: 700;
+     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+ }
+
+ .hero p {
+     font-size: 1.25rem;
+ }
+
+ /* Features Section */
+ .about-content ul {
+     list-style: none;
+     padding: 0;
+ }
+
+ .about-content ul li {
+     position: relative;
+     padding-left: 30px;
+     font-size: 1.1rem;
+     margin-bottom: 15px;
+ }
+
+ .about-content ul li::before {
+     content: "✔";
+     position: absolute;
+     left: 0;
+     top: 0;
+     color: #28a745;
+     font-weight: bold;
+ }
+
+ .cta-button {
+     background-color: #28a745;
+     color: #fff;
+     text-decoration: none;
+     padding: 10px 20px;
+     border-radius: 25px;
+     transition: background-color 0.3s ease;
+ }
+
+ .cta-button:hover {
+     background-color: #218838;
+ }
+
+ /* Footer */
+ footer {
+     background: #343a40;
+     color: #ccc;
+ }
+
+ footer p {
+     font-size: 0.9rem;
+ }

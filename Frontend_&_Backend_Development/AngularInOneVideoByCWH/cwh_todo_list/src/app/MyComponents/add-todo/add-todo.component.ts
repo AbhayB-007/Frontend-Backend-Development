@@ -18,7 +18,7 @@ export class AddTodoComponent {
   @Output() toDeleteAll: EventEmitter<Todo> = new EventEmitter();
 
   constructor(private sharedService: SharedService) {
-    this.updateTodoList();
+    this.updateTodoList();    
   }
 
   validateForm(event: Event) {
@@ -40,7 +40,6 @@ export class AddTodoComponent {
       active: true
     }
     this.todoAdd.emit(todo);
-    console.log(todo);
   }
 
   deleteAll() {
