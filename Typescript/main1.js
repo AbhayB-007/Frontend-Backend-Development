@@ -7,18 +7,3 @@ function doSomething() {
     console.log('Finally i1: ' + i1);
 }
 doSomething();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
