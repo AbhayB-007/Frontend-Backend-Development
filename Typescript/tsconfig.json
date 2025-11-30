@@ -1,0 +1,6 @@
+{
+    "compilerOptions": {
+        "target": "ES2022", // Specify ECMAScript target version
+        "noEmitOnError": true, // Do not emit outputs if any type checking errors are reported
+    }
+}
